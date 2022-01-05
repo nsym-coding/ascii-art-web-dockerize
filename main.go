@@ -20,12 +20,7 @@ func init() {
 }
 
 func main() {
-	fs := http.FileServer(http.Dir("./templates"))
-
-	http.Handle("/", fs)
-	http.HandleFunc("/index.html", index)
-	http.HandleFunc("/ascii-art", asciiart)
-	http.ListenAndServe(":8080", nil)
+	requests()
 }
 
 //Handler function for the index
@@ -146,4 +141,13 @@ func SplitLines(s string) [][]byte {
 	}
 
 	return splitLines
+}
+
+func requests() {
+	fs := http.FileServer(http.Dir("./templates"))
+
+	http.Handle("/", fs)
+	http.HandleFunc("/index.html", index)
+	http.HandleFunc("/ascii-art", asciiart)
+	http.ListenAndServe(":8080", nil)
 }
