@@ -44,6 +44,9 @@ RUN go build -o main
 ##from a networking perspective on the container port
 EXPOSE 8080
 
+LABEL version="1.0"
+LABEL description="This was created by Arnold & Yonas"
+
 ##The entrypoint is under app, then our repo, then main and then the 2nd main
 ##is where our application or executable will be built
 
