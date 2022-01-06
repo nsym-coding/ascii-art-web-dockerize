@@ -13,6 +13,8 @@ ADD . /app
 ##The command below sets the app directory as our working directory. 
 WORKDIR /app
 
+COPY go.mod .
+
 
 ## The RUN command below allows to pull the latest version of any package
 ## we want from github. 
