@@ -1,4 +1,8 @@
-# README FOR ASCII-ART-WEB
+# README FOR ASCII-ART-WEB-DOCKERIZE
+
+This is the same project as ascii-art-web but has been dockerized with the addition of a docker file and relevant scripts.
+
+
 ## Description:
 
 This is a website that converts any string that is entered into ascii art and displays it.
